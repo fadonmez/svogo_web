@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function TermsOfService() {
@@ -137,23 +138,23 @@ export default function TermsOfService() {
             </li>
             <li>
               By subscribing, you agree to these terms as well as our{" "}
-              <a
-                href="https://privacy-policy-svogo.vercel.app"
+              <Link
+                href="/privacy"
                 className="text-blue-500"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Privacy Policy
-              </a>{" "}
+              </Link>{" "}
               and{" "}
-              <a
-                href="https://terms-of-usage.vercel.app"
+              <Link
+                href="/terms"
                 className="text-blue-500"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Terms of Use
-              </a>
+              </Link>
               .
             </li>
           </ul>
@@ -190,14 +191,14 @@ export default function TermsOfService() {
           <p className="text-gray-700">
             Your use of the App is also governed by our Privacy Policy, which
             can be found at{" "}
-            <a
-              href="https://privacy-policy-svogo.vercel.app/"
+            <Link
+              href="/privacy"
               className="text-blue-500"
               target="_blank"
               rel="noopener noreferrer"
             >
               Privacy Policy
-            </a>
+            </Link>
             . By using the App, you consent to the collection and use of your
             information as described in the Privacy Policy.
           </p>
