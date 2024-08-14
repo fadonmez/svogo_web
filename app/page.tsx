@@ -5,8 +5,14 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center h-screen bg-white text-center">
       {/* Logo */}
-      <div className="flex items-center gap-x-48">
-        <Image src="/man.png" alt="Svogo Logo" width={200} height={200} />
+      <div className="flex flex-col lg:flex-row items-center gap-x-12">
+        <Image
+          src="/man.png"
+          alt="Svogo Logo"
+          width={200}
+          height={200}
+          className=" hidden lg:block"
+        />
 
         {/* Main Content */}
         <div className="flex flex-col items-center justify-center mt-10 max-w-2xl">
@@ -37,7 +43,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="flex space-x-8 mt-48  p-4 rounded-lg ">
+      <div className="flex space-x-8 mt-6 lg:mt-48  p-4 rounded-lg ">
         <Link href="/privacy">
           <p className="text-black font-semibold hover:text-[#ffce45] transition-colors">
             Privacy
