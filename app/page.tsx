@@ -3,58 +3,224 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center h-screen bg-white text-center">
-      {/* Logo */}
-      <div className="flex flex-col lg:flex-row items-center gap-x-12">
-        <Image
-          src="/man.png"
-          alt="Svogo Logo"
-          width={200}
-          height={200}
-          className=" hidden lg:block"
-        />
+    <main className="flex flex-col items-center min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="w-full max-w-7xl px-4 py-32 mx-auto">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-x-36">
+          <Image
+            src="/man.png"
+            alt="Svogo Logo"
+            width={200}
+            height={200}
+            className="hidden lg:block"
+          />
 
-        {/* Main Content */}
-        <div className="flex flex-col items-center justify-center mt-10 max-w-2xl">
-          <h1 className="text-4xl font-bold text-black">
-            Learn any language with
-            <span className="text-[#6060FD]"> Svogo</span>
-          </h1>
-          <p className="text-lg  p-6 ">
-            Svogo is your ultimate word-saving app, supporting 10 different
-            languages to enhance your learning experience. With Svogo, you can
-            discover new words, immerse yourself in stories, and test your
-            knowledge—all in one place. Whether you&apos;re brushing up on
-            vocabulary or exploring new languages, Svogo offers an interactive
-            and engaging way to reach your language goals.
-          </p>
+          <div className="flex flex-col items-center text-center">
+            <h1 className="text-5xl font-bold text-black mb-6">
+              Learn any language with
+              <span className="text-[#6060FD]"> Svogo</span>
+            </h1>
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl">
+              Svogo is your ultimate word-saving app, supporting 10 different
+              languages to enhance your learning experience. With Svogo, you can
+              discover new words, immerse yourself in stories, and test your
+              knowledge—all in one place.
+            </p>
 
-          <Link
-            href="https://apps.apple.com/us/app/svogo-learn-language/id6514315379"
-            passHref
-          >
-            <button className="mt-6 bg-[#6060FD] text-white py-3 px-6 rounded-full text-lg font-semibold hover:bg-blue-600 transition-colors">
-              Get Started
-            </button>
-          </Link>
-
-          <p className="mt-4 text-gray-500 text-sm">
-            &quot;Loved by users around the world&quot;
-          </p>
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <Link
+                href="https://apps.apple.com/us/app/svogo-learn-language/id6514315379"
+                target="_blank"
+                className="w-full sm:w-[200px]"
+                passHref
+              >
+                <button className="w-full flex items-center justify-center gap-2 bg-black text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-gray-800 transition-colors">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                  </svg>
+                  App Store
+                </button>
+              </Link>
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.aitu.svogo"
+                target="_blank"
+                className="w-full sm:w-[200px]"
+                passHref
+              >
+                <button className="w-full flex items-center justify-center gap-2 bg-black text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-gray-800 transition-colors">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                  </svg>
+                  Google Play
+                </button>
+              </Link>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="flex space-x-8 mt-6 lg:mt-48  p-4 rounded-lg ">
-        <Link href="/privacy">
-          <p className="text-black font-semibold hover:text-[#ffce45] transition-colors">
-            Privacy
-          </p>
-        </Link>
-        <Link href="/terms">
-          <p className="text-black font-semibold hover:text-[#ffce45] transition-colors">
-            Terms
-          </p>
-        </Link>
-      </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="w-full bg-gray-50 py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex flex-col items-center text-center p-6">
+              <div className="bg-[#6060FD]/10 p-4 rounded-full mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8 text-[#6060FD]"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M12 4C7.58 4 4 7.58 4 12s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm1 13h-2v-2h2v2zm0-4h-2V7h2v6z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-2">10 Languages</h3>
+              <p className="text-gray-600">
+                Learn and practice words in different languages
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center p-6">
+              <div className="bg-[#6060FD]/10 p-4 rounded-full mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8 text-[#6060FD]"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Learn with Stories</h3>
+              <p className="text-gray-600">
+                Make language learning enjoyable with engaging stories
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center p-6">
+              <div className="bg-[#6060FD]/10 p-4 rounded-full mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8 text-[#6060FD]"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Save Words</h3>
+              <p className="text-gray-600">
+                Save and review the words you&apos;ve learned
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="w-full py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-12 text-center">
+            What Our Users Say
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Alex Y.",
+                rating: 5,
+                comment:
+                  "Made my language learning process so much easier. Great app!",
+              },
+              {
+                name: "Sarah K.",
+                rating: 5,
+                comment:
+                  "The story-based learning feature is excellent. Highly recommend!",
+              },
+              {
+                name: "Michael S.",
+                rating: 5,
+                comment:
+                  "A comprehensive app with 10 different language options.",
+              },
+            ].map((review, index) => (
+              <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
+                <div className="flex text-yellow-400 mb-2">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <svg
+                      key={i}
+                      className="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-2">{review.comment}</p>
+                <p className="font-semibold">{review.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="w-full bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-12">
+            <div className="text-center">
+              <h3 className="text-4xl font-bold text-[#6060FD]">10K+</h3>
+              <p className="text-gray-600">Active Users</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-4xl font-bold text-[#6060FD]">100K+</h3>
+              <p className="text-gray-600">Saved Words</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-4xl font-bold text-[#6060FD]">4.8</h3>
+              <p className="text-gray-600">Average Rating</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="w-full py-8 text-center">
+        <p className="text-gray-500 text-sm mb-4">
+          &quot;Loved by users around the world&quot;
+        </p>
+        <div className="flex justify-center space-x-8">
+          <Link href="/privacy">
+            <p className="text-black font-semibold hover:text-[#6060FD] transition-colors">
+              Privacy
+            </p>
+          </Link>
+          <Link href="/terms">
+            <p className="text-black font-semibold hover:text-[#6060FD] transition-colors">
+              Terms
+            </p>
+          </Link>
+        </div>
+      </footer>
     </main>
   );
 }
